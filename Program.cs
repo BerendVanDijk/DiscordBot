@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Threading.Tasks;
+using Victoria;
 
 namespace DiscordBot
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        static async Task Main(string[] args)
+        => await new DiscordBotMusicClient().InitializeAsync();
     }
 }
